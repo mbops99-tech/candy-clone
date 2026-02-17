@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --candy-pink: #FF6B9D;
+  --candy-dark: #0D0D0D;
+  --candy-gray: #1A1A1A;
+}
+
+body {
+  background-color: var(--candy-dark);
+  color: white;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--candy-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--candy-pink);
+  border-radius: 4px;
+}
+
+/* Card hover effects */
+.character-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.character-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(255, 107, 157, 0.3);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #FF6B9D 0%, #FF8EC7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Button styles */
+.btn-primary {
+  background: linear-gradient(135deg, #FF6B9D 0%, #FF8EC7 100%);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(255, 107, 157, 0.5);
+}
+
+/* Chat bubble */
+.chat-bubble-user {
+  background: linear-gradient(135deg, #FF6B9D 0%, #FF8EC7 100%);
+  border-radius: 20px 20px 4px 20px;
+}
+
+.chat-bubble-ai {
+  background: #2A2A2A;
+  border-radius: 20px 20px 20px 4px;
+}
